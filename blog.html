@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing — Jonathan Reeve</title>
+  <meta name="description" content="Articles and thought leadership from Jonathan Reeve on retail strategy, digital disruption, loyalty, AI, and the future of commerce." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Jonathan Reeve" height="36" />
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="blog.html" class="active">Writing</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Writing</p>
+      <h1>Articles &amp;<br>Thought Leadership</h1>
+      <p style="color: var(--text-muted); margin-top: 1rem; max-width: 560px; font-size: 1.1rem;">Over 100 articles on retail strategy, digital disruption, loyalty, AI, and the forces reshaping commerce.</p>
+    </div>
+  </header>
+
+  <!-- FILTER BAR -->
+  <section style="padding: 2rem 0; background: var(--bg-alt); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Loyalty">Loyalty</button>
+        <button class="filter-btn" data-filter="AI">AI</button>
+        <button class="filter-btn" data-filter="Retail Strategy">Retail Strategy</button>
+        <button class="filter-btn" data-filter="E-commerce">E-commerce</button>
+        <button class="filter-btn" data-filter="Personalisation">Personalisation</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES GRID -->
+  <section class="section">
+    <div class="container">
+      <div class="articles-grid" id="articlesGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo">
+        <img src="logo.png" alt="Jonathan Reeve" height="32" />
+      </a>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="blog.html">Writing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Jonathan Reeve</p>
+    </div>
+  </footer>
+
+  <script src="articles.js"></script>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle?.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    function fmtDate(str) {
+      const d = new Date(str);
+      return d.toLocaleDateString('en-AU', { month: 'short', year: 'numeric' });
+    }
+
+    function renderArticles(filter) {
+      const grid = document.getElementById('articlesGrid');
+      const filtered = filter === 'all'
+        ? ARTICLES
+        : ARTICLES.filter(a => a.categories.includes(filter));
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '<p style="color:var(--text-muted)">No articles found for this category.</p>';
+        return;
+      }
+
+      grid.innerHTML = filtered.map(a => `
+        <article class="article-card">
+          <div class="article-meta">
+            <span class="article-pub">${a.publication}</span>
+            <span class="article-date">&middot; ${fmtDate(a.date)}</span>
+          </div>
+          <h3 class="article-title"><a href="${a.url}" target="_blank" rel="noopener">${a.title}</a></h3>
+          <p class="article-summary">${a.summary}</p>
+          <div class="article-tags">
+            ${a.categories.map(c => `<span class="tag">${c}</span>`).join('')}
+          </div>
+          <a href="${a.url}" target="_blank" rel="noopener" class="article-link">Read more &rarr;</a>
+        </article>
+      `).join('');
+    }
+
+    document.getElementById('filterBar').addEventListener('click', e => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderArticles(btn.dataset.filter);
+    });
+
+    renderArticles('all');
+  </script>
+
+</body>
+</html>
