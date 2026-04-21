@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get in Touch — Jonathan Reeve</title>
+  <meta name="description" content="Contact Jonathan Reeve — retail strategist, author, and speaker available for keynotes, advisory work, and strategic conversations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Jonathan Reeve" height="36" />
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="blog.html">Writing</a></li>
+        <li><a href="contact.html" class="nav-cta active">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h1>Let's Start a<br>Conversation</h1>
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div class="contact-form-wrap">
+          <h2>Send a Message</h2>
+          <p style="color: var(--text-muted); margin-bottom: 2rem;">Whether you're interested in a keynote, strategic advice, or just want to connect — fill in the form and I'll get back to you shortly.</p>
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="organisation">Organisation <span style="color:var(--text-muted); font-weight:400;">(optional)</span></label>
+              <input type="text" id="organisation" name="organisation" placeholder="Your company or organisation" />
+            </div>
+            <div class="form-group">
+              <label for="enquiry">What are you looking for?</label>
+              <select id="enquiry" name="enquiry">
+                <option value="">Select an option</option>
+                <option value="speaking">Speaking &amp; Keynotes</option>
+                <option value="advisory">Strategic Advisory</option>
+                <option value="media">Media &amp; Podcast</option>
+                <option value="general">General Enquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me a bit about what you have in mind..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            <div id="formFeedback" style="display:none; margin-top:1rem; padding: 1rem; border-radius: var(--radius); text-align: center;"></div>
+          </form>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="contact-sidebar">
+          <div class="contact-info-card">
+            <h3>What I can help with</h3>
+            <ul class="contact-list">
+              <li>
+                <span class="contact-icon">&#9679;</span>
+                <div>
+                  <strong>Speaking &amp; Keynotes</strong>
+                  <p>Conference keynotes, leadership offsites, panel contributions on the future of retail, digital disruption, and customer strategy.</p>
+                </div>
+              </li>
+              <li>
+                <span class="contact-icon">&#9679;</span>
+                <div>
+                  <strong>Strategic Advisory</strong>
+                  <p>Working with leadership teams to identify what matters, challenge assumptions, and build strategies that hold up in a shifting market.</p>
+                </div>
+              </li>
+              <li>
+                <span class="contact-icon">&#9679;</span>
+                <div>
+                  <strong>Media &amp; Thought Leadership</strong>
+                  <p>Interviews, commentary, and contributed articles on retail trends, AI, loyalty, and e-commerce.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-info-card" style="margin-top: 1.5rem;">
+            <h3>Based in Sydney, Australia</h3>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Available for engagements across Australia, New Zealand, and internationally.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo">
+        <img src="logo.png" alt="Jonathan Reeve" height="32" />
+      </a>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="blog.html">Writing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Jonathan Reeve</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle?.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const feedback = document.getElementById('formFeedback');
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        feedback.style.display = 'block';
+        feedback.style.background = '#fff5f3';
+        feedback.style.color = '#e93415';
+        feedback.style.border = '1px solid #e93415';
+        feedback.textContent = 'Please fill in your name, email, and message.';
+        return;
+      }
+
+      feedback.style.display = 'block';
+      feedback.style.background = '#f0fdf4';
+      feedback.style.color = '#166534';
+      feedback.style.border = '1px solid #bbf7d0';
+      feedback.innerHTML = '<strong>Message sent!</strong> Thank you ' + name + ' — I'll be in touch soon.';
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
