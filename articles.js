@@ -258,6 +258,22 @@ const ARTICLES = [
 
   // ── RETAILBIZ ──────────────────────────────────────────────────────────────
   {
+    title: "The Power and Impact of Agentic Commerce in Retail",
+    publication: "Retailbiz",
+    date: "2026-04-02",
+    url: "https://www.retailbiz.com.au/contributor/the-power-and-impact-of-agentic-commerce-in-retail/",
+    categories: ["AI", "Loyalty", "Retail Strategy"],
+    summary: "How AI shopping agents are transforming retail and why retailers must adopt real-time loyalty infrastructure before batch-processing systems become invisible to agents operating at millisecond speeds."
+  },
+  {
+    title: "Loyalty in Retail: Experts Discuss the 'Winning Formula'",
+    publication: "Retailbiz",
+    date: "2026-03-25",
+    url: "https://www.retailbiz.com.au/contributor/loyalty-in-retail-experts-discuss-winning-formula/",
+    categories: ["Loyalty", "AI", "Retail Strategy"],
+    summary: "Insights from loyalty industry leaders on how retailers can build customer relationships in 2026 through relevance, immediate value, and AI-driven individualisation at scale."
+  },
+  {
     title: "Changing Loyalty Landscape: Here's What Retail Leaders Need to Know",
     publication: "Retailbiz",
     date: "2026-03-20",
