@@ -213,6 +213,14 @@ const ARTICLES = [
   },
 
   // ── ECOMMERCENEWS AUSTRALIA ────────────────────────────────────────────────
+    {
+      title: "Unpacking the Impact of Agentic Commerce Across ANZ",
+      publication: "eCommerceNews",
+      date: "2026-04-02",
+      url: "https://ecommercenews.co.nz/story/unpacking-the-impact-of-agentic-commerce-across-anz",
+      categories: ["AI", "Retail Strategy", "Technology"],
+      summary: "Jonathan Reeve examines how AI shopping agents are beginning to sit between the shopper and checkout, with Woolworths and Loblaw leading the structural shift in retail by deploying agentic commerce capabilities.",
+    },
   {
     title: "Artificial Intelligence and the Retail Personalisation Revolution",
     publication: "eCommerceNews",
@@ -585,6 +593,14 @@ const ARTICLES = [
   },
 
   // ── INTERNET RETAILING ─────────────────────────────────────────────────────
+    {
+      title: "Agentic AI is here—experts reveal how it's reshaping marketing",
+      publication: "Internet Retailing",
+      date: "2026-08-08",
+      url: "https://marketech-apac.com/agentic-ai-is-here-experts-reveal-how-its-reshaping-marketing/",
+      categories: ["AI", "Loyalty", "Technology"],
+      summary: "Jonathan Reeve explains how AI agents, personal shoppers and deal-hunting assistants will change brand promotion strategies and loyalty structures by reorganising how large language models process marketing information.",
+    },
   {
     title: "Amazon's In-Car Delivery Service: Gimmick or Game-Changer?",
     publication: "Internet Retailing",
