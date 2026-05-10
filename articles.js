@@ -214,6 +214,22 @@ const ARTICLES = [
 
   // ── ECOMMERCENEWS AUSTRALIA ────────────────────────────────────────────────
     {
+      title: "Changing Customer Loyalty Landscape: Here's What Retail Leaders Need to Know",
+      publication: "eCommerceNews",
+      date: "2026-03-18",
+      url: "https://ecommercenews.co.nz/story/changing-customer-loyalty-landscape-here-s-what-retail-leaders-need-to-know",
+      categories: ["Loyalty", "AI", "Personalisation"],
+      summary: "Reeve discusses how AI-powered gamification and predictive analytics are transforming loyalty programs, highlighting how retailers can close gaps between capabilities and customer engagement through better data quality and technology integration.",
+    },
+    {
+      title: "Technology and the Shift in Managing Personalised Offers",
+      publication: "eCommerceNews",
+      date: "2026-02-09",
+      url: "https://ecommercenews.co.nz/story/technology-and-the-shift-in-managing-personalised-offers",
+      categories: ["Personalisation", "AI", "Loyalty"],
+      summary: "Reeve presents a framework distinguishing true personalisation from segmentation, explaining how AI enables retailers to scale one-to-one offers while demonstrating the evolution from mass promotions to individual customer targeting.",
+    },
+    {
       title: "Unpacking the Impact of Agentic Commerce Across ANZ",
       publication: "eCommerceNews",
       date: "2026-04-02",
