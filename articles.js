@@ -1,6 +1,14 @@
 const ARTICLES = [
 
   // ── EAGLE EYE BLOG ─────────────────────────────────────────────────────────
+    {
+      title: "What Made Tesco's Clubcard Challenges a Global Loyalty Winner",
+      publication: "Eagle Eye",
+      date: "2026-02-09",
+      url: "https://eagleeye.com/blog/tesco-clubcard-global-loyalty-winner",
+      categories: ["Loyalty", "AI", "Personalisation"],
+      summary: "Jonathan Reeve reflects on Tesco Clubcard Challenges winning at the International Loyalty Awards, highlighting how gamified personalisation drives engagement at scale.",
+    },
   {
     title: "Navigating the Hype Around Personalized Offers",
     publication: "Eagle Eye",
@@ -609,6 +617,14 @@ const ARTICLES = [
   },
 
   // ── INTERNET RETAILING ─────────────────────────────────────────────────────
+    {
+      title: "Eagle Eye launches Smart Rewards for real-time loyalty, omnichannel retail",
+      publication: "Internet Retailing",
+      date: "2025-10-21",
+      url: "https://marketech-apac.com/eagle-eye-launches-smart-rewards-for-real-time-loyalty-omnichannel-retail/",
+      categories: ["Loyalty", "Technology", "Retail Strategy"],
+      summary: "Jonathan Reeve announces Eagle Eye's Smart Rewards solution enabling retailers to deliver personalised offers and points in real-time at checkout.",
+    },
     {
       title: "Agentic AI is here—experts reveal how it's reshaping marketing",
       publication: "Internet Retailing",
